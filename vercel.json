@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "public": true,
+  "builds": [
+    { "src": "portolio.html", "use": "@vercel/static" },
+    { "src": "rag-knowledge-base/index.html", "use": "@vercel/static" },
+    { "src": "rag-knowledge-base/screenshot.svg", "use": "@vercel/static" },
+    { "src": "About Me-Picsart-AiImageEnhancer.png", "use": "@vercel/static" },
+    { "src": "I H.png", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/portolio.html" },
+    { "src": "/rag", "dest": "/rag-knowledge-base/index.html" }
+  ]
+}

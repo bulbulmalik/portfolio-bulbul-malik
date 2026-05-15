@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAG Knowledge Base Demo</title>
+  <style>
+    body { margin:0; font-family: Inter, sans-serif; background:#faf8f4; color:#1a1510; }
+    main { max-width:960px; margin:3rem auto; padding:2rem; }
+    h1 { font-size: clamp(2.5rem, 4vw, 4rem); margin-bottom:1rem; }
+    p { line-height:1.8; margin-bottom:1.25rem; }
+    .tag { display:inline-block; margin:0 .5rem .5rem 0; padding:.6rem 1rem; border-radius:999px; border:1px solid #6b121f; color:#6b121f; font-size:.85rem; }
+    .hero { display:grid; gap:2rem; }
+    .card { border-radius:18px; background:#fff; padding:1.8rem; box-shadow:0 24px 80px rgba(26,21,16,.08); }
+    .button { display:inline-flex; align-items:center; gap:.5rem; background:#6b121f; color:#faf8f4; text-decoration:none; padding:.9rem 1.4rem; border-radius:999px; font-weight:700; }
+    .screenshot { margin-top:2rem; border-radius:12px; overflow:hidden; border:1px solid rgba(26,21,16,.08); }
+    .screenshot img { width:100%; display:block; }
+    .note { color:#4a4035; font-size:.95rem; }
+  </style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <div>
+      <span class="tag">Featured Project</span>
+      <h1>RAG Knowledge Base Demo</h1>
+      <p>This project demonstrates a practical retrieval-augmented generation system. It retrieves the most relevant knowledge documents using semantic search and then generates concise answers from the retrieved context.</p>
+      <p>It is built with:</p>
+      <div>
+        <span class="tag">FastAPI</span>
+        <span class="tag">SentenceTransformers</span>
+        <span class="tag">google/flan-t5-small</span>
+        <span class="tag">RAG</span>
+      </div>
+      <p class="note">Run the app locally to query the demo API or inspect the source in the project folder.</p>
+      <a class="button" href="app.py" target="_blank">Open app.py</a>
+    </div>
+    <div class="card">
+      <h2>How it works</h2>
+      <p>1. Load markdown knowledge documents.</p>
+      <p>2. Encode documents with semantic embeddings.</p>
+      <p>3. Retrieve top matching passages for each user query.</p>
+      <p>4. Generate an answer from the retrieved context using a text generation model.</p>
+    </div>
+  </section>
+  <div class="screenshot">
+    <img src="screenshot.svg" alt="RAG Knowledge Base Demo screenshot">
+  </div>
+</main>
+</body>
+</html>
